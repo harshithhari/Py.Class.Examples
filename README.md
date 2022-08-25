@@ -85,3 +85,44 @@ second_item=Jets('Mirage2000','France',35)
 
 total=first_item.quantity+second_item.quantity
 print(total)'''
+
+
+'''Let's try something else.
+
+Try building a simple class from the ground up. An instance is already created for you and instance
+attributes are included inside the print.
+Take those clues and try to reverse engineer the class.'''
+
+#Type your code here.
+
+'''class Nobel:
+    def __init__(self,category,year,winner):
+        self.category= category
+        self.year = year
+        self.winner = winner
+
+
+np2005=Nobel("Peace", 2005, "Muhammad Yunus")
+print(np2005.category, np2005.year, np2005.winner)'''
+
+'''Let's practice using string representation method to represent the data in previous exercise in a much "classier" way, no pun intended!.
+__str__ function can be used to return a string representation for the class when needed.'''
+
+'''class Nobel:
+    def __init__(self,category,year,winner):
+        self.category= category
+        self.year = year
+        self.winner = winner
+
+    def __str__(self):
+        return "{} was the winner of noble prize in{} in the year{}".format(self.winner,self.category,self.year)
+#{}  is the output holders
+"""def format(self, *args, **kwargs):  # known special case of str.format     
+        S.format(*args, **kwargs) -> str
+        Return a formatted version of S, using substitutions from args and kwargs.
+        The substitutions are identified by braces ('{' and '}').
+        pass"""
+
+
+np2005 = Nobel("Peace", 2005, "Muhammad Yunus")
+print(np2005)'''
