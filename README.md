@@ -126,3 +126,36 @@ __str__ function can be used to return a string representation for the class whe
 
 np2005 = Nobel("Peace", 2005, "Muhammad Yunus")
 print(np2005)'''
+
+
+'''We have seen multiple examples of class usage in Python. Let's build something from ground up.
+In this exercise create a class named myfunc and inside it place a very simple function named "fifth" which takes x and
+returns fifth power of x. No __init__ or class attributes needed.
+Finally call your function with number 5 and assign it to variable ans.'''
+
+'''class myfunc:
+    def fifth(x):
+        return x**5
+
+ans =myfunc.fifth(5)
+print(ans)'''
+#**************************************************************
+*****'''Now let's make some changes to the class we created in the previous Python exercise.
+First make your function so that it takes to parameters: x and y. x will be the number being raised and y will be the power. 
+So, users can raise numbers to any power! Also let's change the function's name to power.
+Also let's add a string representation quickly, so that when a user prints the class they get a meaningful description.
+It can be something like: This class will consist of mathematical operations. We only have one function named power currently.'''******
+
+class myfunc:
+    def power(x,y):
+        return x**y
+    def __str__(self):
+        return "mMyfunc is a class which is capable of mathematical operations like raising a number \nto a power with power function"
+
+ans1 = myfunc.power(8,5)
+ans2 =myfunc()
+
+print(ans1)
+print(ans2)
+
+
