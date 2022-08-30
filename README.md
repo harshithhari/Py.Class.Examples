@@ -34,6 +34,43 @@ a = first_item.origin
 
 print(a)'''
 
+'''Define a Point3D class that inherits from object Inside the Point3D class, define an __init__() function that accepts self, x, y, and z, and
+assigns these numbers to the member variables self.x,self.y,self.z. Define a __repr__() method that returns "(%d, %d, %d)" % (self.x, self.y, self.z).
+This tells Python to represent this object in the following format: (x, y, z).
+Outside the class definition, create a variable named my_point containing a new instance of Point3D with x=1, y=2, and z=3. Finally, print my_point.'''
+
+******'''Where do we use F in Python?
+Python f strings embed expressions into a string literal. 
+You can use f strings to embed variables, strings, or the results of functions into a string. 
+An f string are prefixed with “f” at the start, before the string iitself begins. 
+Introduced in Python 3.6, make it easier to format strings.'''****
+
+****'''The %d operator is used as a placeholder to specify integer values, decimals or numbers. 
+It allows us to print numbers within strings or other values. 
+The %d operator is put where the integer is to be specified. 
+Floating-point numbers are converted automatically to decimal values'''***
+
+
+
+
+
+
+
+class point3d:
+    def __init__(self,x,y,z):
+        self.x = x
+        self.y = y
+        self.z = z
+
+    def __repr__(self):
+        return "(%d,%d,%d)" % (self.x,self.y,self.z) #%d is the place value holder we have to use in the format "%d" % VN(Varibale name from whihc value will be holded here
+
+my_point=point3d(1,2,3)
+print(my_point)
+
+
+
+
 '''Create new instances until the sixth item following this order:
 F14, SU33, AJS37, Mirage2000, Mig29, A10.
 You can check Hint 1 for the origins.
