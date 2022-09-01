@@ -363,3 +363,45 @@ class F14(Jets):
 a = F14()
 print(a.origin)
 print(a.name)'''
+
+'''Write a Python program to create a Vehicle class with max_speed and mileage instance attributes.'''
+
+'''class vehicle:
+    def __init__(self,max_speed,mileage):
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+x = vehicle(200,20)
+print(x.max_speed,x.mileage)'''
+
+
+'''Create a Vehicle class without any variables and methods'''
+
+'''class vehicle:
+    def show(self):
+        pass
+x = vehicle()
+print(x.show())'''
+
+#without any variables
+
+'''class vehicle:
+    pass'''
+
+
+'''OOP Exercise 3: Create a child class Bus that will inherit all of the variables and methods of the Vehicle class'''
+
+class Vehicle:
+
+    def __init__(self, name, max_speed, mileage):
+        self.n = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+class bus(Vehicle):
+    pass
+
+x = bus('volvo',150,20)
+
+print(x.n,x.max_speed,x.mileage)
+
