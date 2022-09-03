@@ -404,4 +404,419 @@ class bus(Vehicle):
 x = bus('volvo',150,20)
 
 print(x.n,x.max_speed,x.mileage)
+***********************************************************************************************************************************************************************
+*******'''Create a Bus class that inherits from the Vehicle class. Give the capacity argument of Bus.**********
+seating_capacity() a default value of 50.
+Use the following code for your parent Vehicle class.'''
+'''class Vehicle:
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+    def seating_capacity(self, capacity):
+        return f"The seating capacity of a {self.name} is {capacity} passengers"
+
+class bus(Vehicle):
+    def seating_capacity(self, capacity=50):
+        return super().seating_capacity(capacity=50)
+
+y = bus('Volvo',200,20)
+
+print(y.seating_capacity())'''
+
+
+'''OOP Exercise 5: Define a property that must have the same value for every class instance (object)
+Define a class attribute”color” with a default value white. I.e., Every Vehicle should be white.
+
+Use the following code for this exercise.'''
+
+'''class Vehicle:
+
+    Color = 'white'
+
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+class Bus(Vehicle):
+    pass
+
+class Car(Vehicle):
+    pass
+
+x = Bus('Volvo',200,20)
+y= Car ('Audi',220,20)
+
+print(f'color :{x.Color},name :{x.name},max speed: {x.max_speed},mileage:{x.mileage}')'''
+
+'''Home » Python Exercises » Python Object-Oriented Programming (OOP) Exercise: Classes and Objects Exercises
+Python Object-Oriented Programming (OOP) Exercise: Classes and Objects Exercises
+Updated on: December 8, 2021 | 36 Comments
+
+This Object-Oriented Programming (OOP) exercise aims to help you to learn and practice OOP concepts. All questions are tested on Python 3.
+
+Python Object-oriented programming (OOP) is based on the concept of “objects,” which can contain data and code: data in the form of instance variables (often known as attributes or properties), and code, in the form method. I.e., Using OOP, we encapsulate related properties and behaviors into individual objects.
+
+What is included in this Python OOP exercise?
+
+This OOP classes and objects exercise includes 8 different programs, questions, and challenges. All solutions are tested on Python 3.
+
+
+This OOP exercise covers questions on the following topics:
+
+Class and Object creation
+Instance variables and Methods, and Class level attributes
+Model systems with class inheritance i.e., inherit From Other Classes
+Parent Classes and Child Classes
+Extend the functionality of Parent Classes using Child class
+Object checking
+
+When you complete each question, you get more familiar with the Python OOP. Let us know if you have any alternative solutions. It will help other developers.
+
+Use Online Code Editor to solve exercise questions.
+
+Refer:
+
+Guide on Python OOP
+Inheritance in Python
+Table of contents
+OOP Exercise 1: Create a Class with instance attributes
+OOP Exercise 2: Create a Vehicle class without any variables and methods
+OOP Exercise 3: Create a child class Bus that will inherit all of the variables and methods of the Vehicle class
+OOP Exercise 4: Class Inheritance
+OOP Exercise 5: Define a property that must have the same value for every class instance (object)
+OOP Exercise 6: Class Inheritance
+OOP Exercise 7: Check type of an object
+OOP Exercise 8: Determine if School_bus is also an instance of the Vehicle class
+
+OOP Exercise 1: Create a Class with instance attributes
+Write a Python program to create a Vehicle class with max_speed and mileage instance attributes.
+
+Refer:
+
+Classes and Objects in Python
+Instance variables in Python
+Show Solution
+OOP Exercise 2: Create a Vehicle class without any variables and methods
+Show Solution
+OOP Exercise 3: Create a child class Bus that will inherit all of the variables and methods of the Vehicle class
+Given:
+
+class Vehicle:
+
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+Create a Bus object that will inherit all of the variables and methods of the parent Vehicle class and display it.
+
+Expected Output:
+
+Vehicle Name: School Volvo Speed: 180 Mileage: 12
+Refer: Inheritance in Python
+
+Show Solution
+OOP Exercise 4: Class Inheritance
+Given:
+
+Create a Bus class that inherits from the Vehicle class. Give the capacity argument of Bus.seating_capacity() a default value of 50.
+
+Use the following code for your parent Vehicle class.
+
+class Vehicle:
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+    def seating_capacity(self, capacity):
+        return f"The seating capacity of a {self.name} is {capacity} passengers"
+
+Expected Output:
+
+The seating capacity of a bus is 50 passengers
+Refer:
+
+Inheritance in Python
+Polymorphism in Python
+Show Hint
+First, use method overriding.
+Next, use default method argument in the seating_capacity() method definition of a bus class.
+Show Solution
+class Vehicle:
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+    def seating_capacity(self, capacity):
+        return f"The seating capacity of a {self.name} is {capacity} passengers"
+
+class Bus(Vehicle):
+    # assign default value to capacity
+    def seating_capacity(self, capacity=50):
+        return super().seating_capacity(capacity=50)
+
+School_bus = Bus("School Volvo", 180, 12)
+print(School_bus.seating_capacity())
+ Run
+OOP Exercise 5: Define a property that must have the same value for every class instance (object)
+Define a class attribute”color” with a default value white. I.e., Every Vehicle should be white.
+
+Use the following code for this exercise.
+
+class Vehicle:
+
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+class Bus(Vehicle):
+    pass
+
+class Car(Vehicle):
+    pass
+
+Expected Output:
+
+Color: White, Vehicle name: School Volvo, Speed: 180, Mileage: 12
+Color: White, Vehicle name: Audi Q5, Speed: 240, Mileage: 18
+Refer: Class Variable in Python
+
+Show Hint
+Show Solution
+Variables created in .__init__() are called instance variables. An instance variable’s value is specific to a particular instance of the class. For example, in the solution, All Vehicle objects have a name and a max_speed, but the name and max_speed variables’ values will vary depending on the Vehicle instance.
+
+On the other hand, the class variable is shared between all class instances. You can define a class attribute by assigning a value to a variable name outside of .__init__().
+
+class Vehicle:
+    # Class attribute
+    color = "White"
+
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+class Bus(Vehicle):
+    pass
+
+class Car(Vehicle):
+    pass
+
+School_bus = Bus("School Volvo", 180, 12)
+print(School_bus.color, School_bus.name, "Speed:", School_bus.max_speed, "Mileage:", School_bus.mileage)
+
+car = Car("Audi Q5", 240, 18)
+print(car.color, car.name, "Speed:", car.max_speed, "Mileage:", car.mileage)
+Run'''
+
+'''Home » Python Exercises » Python Object-Oriented Programming (OOP) Exercise: Classes and Objects Exercises
+Python Object-Oriented Programming (OOP) Exercise: Classes and Objects Exercises
+Updated on: December 8, 2021 | 36 Comments
+
+This Object-Oriented Programming (OOP) exercise aims to help you to learn and practice OOP concepts. All questions are tested on Python 3.
+
+Python Object-oriented programming (OOP) is based on the concept of “objects,” which can contain data and code: data in the form of instance variables (often known as attributes or properties), and code, in the form method. I.e., Using OOP, we encapsulate related properties and behaviors into individual objects.
+
+What is included in this Python OOP exercise?
+
+This OOP classes and objects exercise includes 8 different programs, questions, and challenges. All solutions are tested on Python 3.
+
+
+This OOP exercise covers questions on the following topics:
+
+Class and Object creation
+Instance variables and Methods, and Class level attributes
+Model systems with class inheritance i.e., inherit From Other Classes
+Parent Classes and Child Classes
+Extend the functionality of Parent Classes using Child class
+Object checking
+
+When you complete each question, you get more familiar with the Python OOP. Let us know if you have any alternative solutions. It will help other developers.
+
+Use Online Code Editor to solve exercise questions.
+
+Refer:
+
+Guide on Python OOP
+Inheritance in Python
+Table of contents
+OOP Exercise 1: Create a Class with instance attributes
+OOP Exercise 2: Create a Vehicle class without any variables and methods
+OOP Exercise 3: Create a child class Bus that will inherit all of the variables and methods of the Vehicle class
+OOP Exercise 4: Class Inheritance
+OOP Exercise 5: Define a property that must have the same value for every class instance (object)
+OOP Exercise 6: Class Inheritance
+OOP Exercise 7: Check type of an object
+OOP Exercise 8: Determine if School_bus is also an instance of the Vehicle class
+
+OOP Exercise 1: Create a Class with instance attributes
+Write a Python program to create a Vehicle class with max_speed and mileage instance attributes.
+
+Refer:
+
+Classes and Objects in Python
+Instance variables in Python
+Show Solution
+OOP Exercise 2: Create a Vehicle class without any variables and methods
+Show Solution
+OOP Exercise 3: Create a child class Bus that will inherit all of the variables and methods of the Vehicle class
+Given:
+
+class Vehicle:
+
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+Create a Bus object that will inherit all of the variables and methods of the parent Vehicle class and display it.
+
+Expected Output:
+
+Vehicle Name: School Volvo Speed: 180 Mileage: 12
+Refer: Inheritance in Python
+
+Show Solution
+OOP Exercise 4: Class Inheritance
+Given:
+
+Create a Bus class that inherits from the Vehicle class. Give the capacity argument of Bus.seating_capacity() a default value of 50.
+
+Use the following code for your parent Vehicle class.
+
+class Vehicle:
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+    def seating_capacity(self, capacity):
+        return f"The seating capacity of a {self.name} is {capacity} passengers"
+
+Expected Output:
+
+The seating capacity of a bus is 50 passengers
+Refer:
+
+Inheritance in Python
+Polymorphism in Python
+Show Hint
+First, use method overriding.
+Next, use default method argument in the seating_capacity() method definition of a bus class.
+Show Solution
+class Vehicle:
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+    def seating_capacity(self, capacity):
+        return f"The seating capacity of a {self.name} is {capacity} passengers"
+
+class Bus(Vehicle):
+    # assign default value to capacity
+    def seating_capacity(self, capacity=50):
+        return super().seating_capacity(capacity=50)
+
+School_bus = Bus("School Volvo", 180, 12)
+print(School_bus.seating_capacity())
+ Run
+OOP Exercise 5: Define a property that must have the same value for every class instance (object)
+Define a class attribute”color” with a default value white. I.e., Every Vehicle should be white.
+
+Use the following code for this exercise.
+
+class Vehicle:
+
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+class Bus(Vehicle):
+    pass
+
+class Car(Vehicle):
+    pass
+
+Expected Output:
+
+Color: White, Vehicle name: School Volvo, Speed: 180, Mileage: 12
+Color: White, Vehicle name: Audi Q5, Speed: 240, Mileage: 18
+Refer: Class Variable in Python
+
+Variables created in .__init__() are called instance variables. An instance variable’s value is specific to a particular instance of the class. For example, in the solution, All Vehicle objects have a name and a max_speed, but the name and max_speed variables’ values will vary depending on the Vehicle instance.
+
+On the other hand, the class variable is shared between all class instances. You can define a class attribute by assigning a value to a variable name outside of .__init__().
+
+class Vehicle:
+    # Class attribute
+    color = "White"
+
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+class Bus(Vehicle):
+    pass
+
+class Car(Vehicle):
+    pass
+
+School_bus = Bus("School Volvo", 180, 12)
+print(School_bus.color, School_bus.name, "Speed:", School_bus.max_speed, "Mileage:", School_bus.mileage)
+
+car = Car("Audi Q5", 240, 18)
+print(car.color, car.name, "Speed:", car.max_speed, "Mileage:", car.mileage)
+ Run'''
+
+'''OOP Exercise 6: Class Inheritance
+Given:
+
+Create a Bus child class that inherits from the Vehicle class. 
+The default fare charge of any vehicle is seating capacity * 100. 
+If Vehicle is Bus instance, we need to add an extra 10% on full fare as a maintenance charge. 
+So total fare for bus instance will become the final amount = total fare + 10% of the total fare.'''
+
+'''class Vehicle:
+    def __init__(self, name, mileage, capacity):
+        self.name = name
+        self.mileage = mileage
+        self.capacity = capacity
+
+    def fare(self):
+        return self.capacity * 100
+
+class Bus(Vehicle):
+    def fare(self):
+        total = super().fare()
+        final_amount= total+(10/100*total)
+        return final_amount
+
+School_bus = Bus("School Volvo", 12, 50)
+print("Total Bus fare is:", School_bus.fare())'''
+
+'''OOP Exercise 7: Check type of an object
+Write a program to determine which class a given Bus object belongs to.'''
+class Vehicle:
+    def __init__(self, name, mileage, capacity):
+        self.name = name
+        self.mileage = mileage
+        self.capacity = capacity
+
+class Bus(Vehicle):
+    pass
+
+School_bus = Bus("School Volvo", 12, 50)
+
+print(issubclass(Bus,Vehicle))
+print(type(School_bus))
+
 
